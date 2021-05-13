@@ -1,0 +1,113 @@
+<!-- <html>
+    <head>
+        <title>FIDOR Bank Services-Transfer Result</title>
+    </head>
+{% if fTransactionID %}  
+    <body>
+        <h1>Bank Transfer Completed (Transaction ID: {{ fTransactionID }})</h1>
+        <br>
+        <h2> SGD $ {{ famount }} is transferred to {{ fRecipientName }}</h2><br>
+        <h2> using recipient email : {{ custEmail }} </h2>
+        <br>
+        <h2> Transfer Remark : {{ fRemarks }}</h2><br>
+        <a href="services"><h2>Bank to Main Menu</h2></a><br>
+    </body>
+{% else %}    
+    <body>
+        <h1>No customers details</h1>
+        <a href="index">back to index</a>
+    </body>
+{% endif %}
+</html> -->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cryptocurrency</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="page-wrapper">
+					<header id="header">
+						<h1>Account</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+          			</header>
+                    
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{{ url_for('start_page')}}">Home</a></li>
+								<li><a href="{{ url_for('stock')}}">Price</a></li>
+								<li><a href="{{ url_for('services')}}">My Account</a></li>
+								<li><a href="{{ url_for('login')}}">Log In</a></li>
+								<li><a href="{{ url_for('index')}}">Chart</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+                    </nav>
+                    
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+                                <h2>My Account</h2><br>
+							</div>
+                        </header>
+                    
+                        <div class="wrapper">
+                            <div class="inner">
+						        <section>
+                                    <h3 class="major">Transfer Details</h3> 
+							        <div class="table-wrapper">
+								        <table>
+									        <tbody>
+										        <tr>
+											        <td>Bank Transfer Completed (Transaction ID)</td>
+											        <td>{{ fTransactionID }}</td>
+										        </tr>
+										        <tr>
+											        <td>Amount transfered  </td>
+											        <td>SGD $ {{ famount }}</td>
+                                                </tr>
+                                                <tr>
+											        <td>Recipient Name</td>
+											        <td>{{ fRecipientName }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>recipient email :</td>
+                                                    <td>{{ custEmail }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Transfer Remark</td>
+                                                    <td>{{ fRemarks }}</td>
+                                                </tr>
+                                           </tbody>
+                                           
+                                           
+										</table>	
+										<a href="{{ url_for('services')}}">Back</a>
+                        
+                       
+                        
+			        </div>
+
+
+
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
+
+
+
+

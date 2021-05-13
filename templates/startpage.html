@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="page-wrapper">
+					<header id="header" class="alt">
+						<h1>Cryptocurrency</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{{ url_for('start_page')}}">Home</a></li>
+								<li><a href="{{ url_for('stock')}}">Price</a></li>
+								<li><a href="{{ url_for('services')}}">My Account</a></li>
+								<li><a href="{{ url_for('login')}}">Log In</a></li>
+								<li><a href="{{ url_for('index')}}">Chart</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-gem"></span></div>
+							<h2>Cryptocurrency</h2>
+							<p>Check cryptocurrency price & Make internal transfer via fidor bank</p>
+						</div>
+					</section>
+
+					<section id="wrapper">
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Price</h2>
+										<p>To check cryptocurrency price</p>
+										<a href="{{ url_for('stock')}}" class="special">Search</a>
+									</div>
+								</div>
+							</section>
+
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">My account</h2>
+										<p>To view my account detail and to transfer money via fidor bank</p>
+										<a href="{{ url_for('services')}} "class="special">View</a>
+									</div>
+								</div>
+							</section>
+
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">News</h2>
+									<p>Latest news about cryptocurrency</p>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="{{ nImage }}" alt="" /></a>
+											<h3 class="major">{{ nTitle }}</h3>
+											<p>{{ nBody }}</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{{ nImage1 }}" alt="" /></a>
+											<h3 class="major">{{ nTitle1 }}</h3>
+											<p>{{ nBody1 }}</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{{ nImage2 }}" alt="" /></a>
+											<h3 class="major">{{ nTitle2 }}</h3>
+											<p>{{ nBody2 }}</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{{ nImage3 }}" alt="" /></a>
+											<h3 class="major">{{ nTitle3 }}</h3>
+											<p>{{ nBody3 }}</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section>
+									<ul class="actions">
+										<li><a href="#" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</div>
+					</section>
+
+			</div>
+
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>

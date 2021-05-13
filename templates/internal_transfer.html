@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cryptocurrency</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="page-wrapper">
+					<header id="header">
+						<h1>Cryptocurrency</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+                    </header>
+                    
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{{ url_for('start_page')}}">Home</a></li>
+								<li><a href="{{ url_for('stock')}}">Price</a></li>
+								<li><a href="{{ url_for('services')}}">My Account</a></li>
+								<li><a href="{{ url_for('login')}}">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+                    </nav>
+                    
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>My Account</h2>
+							</div>
+                        </header>
+                        <div class="wrapper">
+                            <div class="inner">
+								<section>
+								<div class="table-wrapper">
+                        			<h2> FIDOR Bank Account ({{ fAccountNo }}) - Balance $ {{ fBalance }}</h2>
+                        			<form action="process" method="post">
+                          			Your FIDOR ID: <input type="text" name="fidorID" value="{{ fFIDORID }}"><br><br>
+                          			Recipient Email Address: <input type="text" name="customerEmailAdd" value=""><br><br>
+                          			Transfer Amount SGD$: <input type="text" name="transferAmount" value="">(Limit to SGD$500)<br><br>
+                          			Transaction Reference (Any random values): <input type="text" name="transactionID" value=""><br><br>
+                          			Remarks: <input type="text" name="transferRemarks" value=""><br><br>
+                          			<input type="submit" value="Submit">
+									</form>
+								</div>
+								</section>			
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+
+
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
+
+
+

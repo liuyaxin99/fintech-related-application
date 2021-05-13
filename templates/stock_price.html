@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cryptocurrency</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="page-wrapper">
+					<header id="header">
+						<h1>Cryptocurrency</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+                    </header>
+                    
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{{ url_for('start_page')}}">Home</a></li>
+								<li><a href="{{ url_for('stock')}}">Price</a></li>
+								<li><a href="{{ url_for('services')}}">My Account</a></li>
+								<li><a href="{{ url_for('login')}}">Log In</a></li>
+								<li><a href="{{ url_for('index')}}">Chart</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+                    </nav>
+                    
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Latest Cryptocurrency Price</h2>
+							</div>
+                        </header>
+                        <div class="wrapper">
+                            <div class="inner">
+						        <section>
+							        <h3 class="major">Detail</h3>
+							        <div class="table-wrapper">
+								        <table>
+									        <thead>
+										        <tr>
+											        <th></th>
+											        <th></th>
+											        <th>Price</th>
+										        </tr>
+                                            </thead>
+                                            {% if tCode %}
+									        <tbody>
+										        <tr>
+											        <td>Cryptocurrency Ticker </td>
+											        <td>({{ tCode }})</td>
+											        <td>....</td>
+										        </tr>
+										        <tr>
+											        <td>Closing Stock Price </td>
+											        <td>....</td>
+											        <td>({{ sPrice }})</td>
+										        </tr>
+										        <tr>
+											        <td>Closing Volume </td>
+											        <td> ....</td>
+											        <td>({{ cVolume }})</td>
+										        </tr>
+										        <tr>
+											        <td>Date and time </td>
+											        <td>....</td>
+											        <td>({{ dTime }})</td>
+										        </tr>
+                                            </tbody>
+                                            {% else %}  
+                                            <tbody>
+                                                <h1>No price data</h1>
+                                                <a href="{{ url_for('stock')}}">back to stock</a>
+                                            </tbody>
+                                            {% endif %}
+								        </table>
+							        </div>
+						        </section>			
+			        </div>
+
+
+
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
